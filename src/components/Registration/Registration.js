@@ -55,7 +55,7 @@ class Registration extends React.Component {
 			          type="text"
 			          name="name"
 			          id="name"
-			           onChange={this.onEmailChange}
+			           onChange={this.onNameChange}
 			        />
 			      </div>
 			      <div className="mt3">
