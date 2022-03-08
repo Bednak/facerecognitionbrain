@@ -23,7 +23,7 @@ class Registration extends React.Component {
 	}
 
 	onSubmitSignIn = () => {
-		fetch('http://localhost:3000/register', {
+		fetch('https://bednak-smart-brain.herokuapp.com/register', {
 			method: 'post',
 			headers: {'Content-Type': 'application/json'},
 			body: JSON.stringify({
@@ -34,7 +34,7 @@ class Registration extends React.Component {
 		})
 		.then(response => response.json())
 		.then(user => {
-			if (user) {
+			if (user.id) {
 				this.props.loadUser(user)
 				this.props.onRouteChange('home');
 			}
